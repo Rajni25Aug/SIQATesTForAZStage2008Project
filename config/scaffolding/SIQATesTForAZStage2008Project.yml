@@ -1,0 +1,9 @@
+version: "1.0"
+info:
+  model: int-scaffold
+packages:
+- name: SIQATesTForAZStage2008Project
+  gitServerName: kusiAzStage2
+  gitUrl: https://github.com/Rajni25Aug
+  gitUsername: Rajni25Aug
+  gitBranch: main
