@@ -8,12 +8,149 @@ packages:
   gitUsername: Rajni25Aug
   gitBranch: main
 - name: SIQAJDBCAdapterTests
+  version: "1.0"
   gitServerName: SIQAGitHub
   gitUrl: https://github.com/manoj-jannu-IBM
   gitUsername: manoj-jannu-IBM
   gitBranch: main
 - name: SIQACloudStreamsTests
+  version: "1.0"
   gitServerName: kusiAzStage2
   gitUrl: https://github.com/manoj-jannu-IBM
   gitUsername: Rajni25Aug
   gitBranch: main
+- name: WmSalesforceRESTProvider
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: supported
+services:
+- serviceName: project.siqatestforazstage2008.WmSalesforceRESTProvider.com_softwareag_cloudstreams_salesforce_rest_v60.connections:SiqaSalesforceTest
+  packages:
+  - name: SIQATesTForAZStage2008Project
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.66
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.196
+- serviceName: project.siqatestforazstage2008.integrations:testsalesforce
+  packages:
+  - name: SIQATesTForAZStage2008Project
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.66
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.196
+- serviceName: project.siqatestforazstage2008.WmSalesforceRESTProvider.com_softwareag_cloudstreams_salesforce_rest_v60.operations.actions:salesforcetest
+  packages:
+  - name: SIQATesTForAZStage2008Project
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.66
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.196
+configurationVariables:
+  ? iscloudstreamsconnectorservice.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..operations..actions:salesforcetest.virtualServiceName
+  : WmCloudStreams.RestVS
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.oauth_v20.authorizationHeaderPrefix
+  : Bearer
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.timeoutType
+  : auto
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.oauth_v20.authorizationHeaderInTokenRefresh
+  : "false"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.blockTimeout
+  : "1000"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.oauth_v20.authenticationServerUrl
+  : https://login.salesforce.com/services/oauth2/token
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.providerUrl
+  : https://sag53-dev-ed.develop.my.salesforce.com
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.enableCompression
+  : "false"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.oauth_v20.accessTokenRefreshURLRequest
+  : URL Query String
+  ? iscloudstreamsconnectorservice.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..operations..actions:salesforcetest.connectionAlias
+  : project.siqatestforazstage2008.WmSalesforceRESTProvider.com_softwareag_cloudstreams_salesforce_rest_v60.connections:SiqaSalesforceTest
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.oauth.accessToken
+  : "{AES}h1r1CmTvU65r25EqPgWKVTnXoZSKkhSUJ2Y7HRSoaYHuy4C0VRBa2Ks/evdeDpkQaxtIrJfJU8TLMzgIM7dtGI+yF3emwgxzXJVuhHZgC6sX4gpn3SA2+GOnewcTg63ngfuIrvczGJdZEhQ0zr1Ka2mK1wuN3U1rA1B0VhuZoUw="
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.poolable
+  : "true"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.retryCount
+  : "4"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cx.grant_type
+  : refresh_token
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.oauth_v20.accessTokenRefreshURL
+  : https://login.salesforce.com/services/oauth2/token
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.oauth_v20.refreshAccessToken
+  : "true"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.connectTimeout
+  : "30000"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.poolIncrementSize
+  : "1"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.connectionEnabled
+  : "true"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.maximumPoolSize
+  : "10"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.oauth.consumerSecret
+  : "{AES}ePv9vDKXdd6A2HDsPDBAO8y1Fe9R7m6Dya5xSCLlAK353vKmgg/uiZT0YAoUU42Eojf9A5EvRE+pSL3aLrpBNWmK1wuN3U1rA1B0VhuZoUw="
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.tcpNoDelay
+  : "false"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.socketStaleCheck
+  : "true"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.oauth_v20.authorizationServerUrl
+  : https://login.salesforce.com/services/oauth2/authorize
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.socketLinger
+  : "-1"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.enableSNI
+  : "true"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.keepAliveInterval
+  : "300000"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.startupRetryCount
+  : "0"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.reuseAddr
+  : "false"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.oauth.consumerId
+  : 3MVG9k02hQhyUgQCKlnwOVc1lTfY9AqPHmUIRA6I.ZqYzln.F3Vuok.Rk6d6F00IhbOJxstGzhIJDyuJGd0ft
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.sockBuffSize
+  : "8192"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.readTimeout
+  : "30000"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.idleTimeout
+  : "-1"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.oauth_v20.scope
+  : offline_access api refresh_token
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.validateAfterInactivity
+  : "1000"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.minimumPoolSize
+  : "1"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.expireTimeout
+  : "1000"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.startupBackoffSecs
+  : "10"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.retryIfRequestSentOk
+  : "true"
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.cn.hostnameVerifier
+  : org.apache.http.conn.ssl.DefaultHostnameVerifier
+  ? cloudstreamsconnection.project..siqatestforazstage2008..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SiqaSalesforceTest.oauth_v20.refreshToken
+  : "{AES}z0OyKRGMCuSrw5+VwAKX9/oM6BIKjPeYnDaBN96E5WE51ihADTbuVPxNgEzibj4QZ+EkdVmuzavsuGo7cSFFyYqssvQYfu051UABuvfGck7t1OSEZFCXaC8TXIG3+XjN"
